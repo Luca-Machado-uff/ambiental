@@ -1,0 +1,32 @@
+{% extends 'memorial/base.html' %}
+{% load static %}
+{% block content %}
+    <header class="main-header">
+        <div>
+            <ul class="header-menu">
+                <li> 
+                    <a href="{% url 'index' %}">Home</a>
+                </li>
+                <li> 
+                    <a href="{% url 'sobre' %}">Sobre o site</a>
+                </li>
+                <li> 
+                    <a href="{% url 'ajuda' %}">Ajude o projeto</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <div class="help-body">
+        <main class="help-main">
+                <h2>O que é o projeto Ambientalistas do Brasil: Memorial?</h2>
+                <p> É em essência, um mural onde o legado e a luta daqueles que dedicaram e entregaram sua vida para proteger e preservar o meio ambiente no Brasil. Aqui a ideia é que ambientalistas, líderes indígenas e outras vítimas, não tenham seus nomes esquecidos.
+                </br></br>
+                    Cada nome nesta lista representa uma história, uma história de alguém que enfrentou adversidades, desafios políticos e obstáculos sociais em busca de um futuro sustentável.
+                </br></br>
+                    O projeto ainda está nas suas fases iniciais, em breve será incorporado um blog, maior interatividade, onde você poderá ver mais detalhes sobre cada pessoa. Além disso, nossa base de dados ainda é bem limitada.
+                </br></br>
+                    Portanto, se você conhece alguém que deveria ser incluído neste memorial, por favor, entre em contato conosco para que possamos honrar e reconhecer suas contribuições.
+                    
+        </main>
+    </div>
+{% endblock %}

@@ -1,0 +1,223 @@
+{% extends 'memorial/base.html' %}
+{% load static %}
+{% block content %}
+<header class="main-header">
+    <div>
+        <ul class="header-menu">
+            <li> 
+                <a href="{% url 'index' %}">Home</a>
+            </li>
+            <li> 
+                <a href="{% url 'sobre' %}">Sobre o site</a>
+            </li>
+            <li> 
+                <a href="{% url 'ajuda' %}">Ajude o projeto</a>
+            </li>
+        </ul>
+    </div>
+    <div class="header-bottom">
+        <div>
+            <h1>AMBIENTALISTAS DO BRASIL</br> <span>Memorial</span> </h1>
+        </div>
+        <form action="{% url 'index' %}" class="search-form">
+            <div class="search-box">
+                <input class="search-bar" type="text" name="buscar" placeholder="Busque aqui por um nome">
+                <button class="search-button">
+                    <img class="search-icon" src="{% static 'assets/imagens/search.png' %}" alt="Buscar">
+                </button>
+            </div>
+        </form>
+    </div>
+</header>
+        <main class="home-main">
+            <section class="names-section">
+                {% if nomes %}
+                {% for memorias in nomes %}
+                <div class="name-unit"> 
+                    <p>
+                        <span class="date-local">{{memorias.ano_de_nascimento}},&ensp;&nbsp;{{memorias.local_de_nascimento}}</span>
+                        <span class="name">{{memorias.nome}}</span>
+                        <span class="date-local">{{memorias.ano_de_falecimento}},&ensp;&nbsp;{{memorias.local_de_falecimento}}</span>
+                    </p>
+                </div>
+                {% endfor %}
+                {% else %}
+                {% endif %}
+                <!-- <div class="name-unit"> 
+                    <p>
+                        <span class="date-local">1944,&ensp;&nbsp;Acre </span>
+                        <span class="name">Chico Mendes</span>
+                        <span class="date-local">1988,&ensp;&nbsp;Acre</span>
+                    </p>
+                </div>
+                <div class="name-unit"> 
+                    <p>
+                        <span class="date-local">1944,&ensp;&nbsp;Acre </span>
+                        <span class="name">Chico Mendes</span>
+                        <span class="date-local">1988,&ensp;&nbsp;Acre</span>
+                    </p>
+                </div>
+                <div class="name-unit"> 
+                    <p>
+                        <span class="date-local">1944,&ensp;&nbsp;Acre </span>
+                        <span class="name">Chico Mendes</span>
+                        <span class="date-local">1988,&ensp;&nbsp;Acre</span>
+                    </p>
+                </div>
+                <div class="name-unit"> 
+                    <p>
+                        <span class="date-local">1944,&ensp;&nbsp;Acre </span>
+                        <span class="name">Chico Mendes</span>
+                        <span class="date-local">1988,&ensp;&nbsp;Acre</span>
+                    </p>
+                </div>
+                <div class="name-unit"> 
+                    <p>
+                        <span class="date-local">1944,&ensp;&nbsp;Acre </span>
+                        <span class="name">Chico Mendes</span>
+                        <span class="date-local">1988,&ensp;&nbsp;Acre</span>
+                    </p>
+                </div>
+                <div class="name-unit"> 
+                    <p>
+                        <span class="date-local">1944,&ensp;&nbsp;Acre </span>
+                        <span class="name">Chico Mendes</span>
+                        <span class="date-local">1988,&ensp;&nbsp;Acre</span>
+                    </p>
+                </div>
+                <div class="name-unit"> 
+                    <p>
+                        <span class="date-local">1944,&ensp;&nbsp;Acre </span>
+                        <span class="name">Chico Mendes</span>
+                        <span class="date-local">1988,&ensp;&nbsp;Acre</span>
+                    </p>
+                </div>
+                <div class="name-unit"> 
+                    <p>
+                        <span class="date-local">1944,&ensp;&nbsp;Acre </span>
+                        <span class="name">Chico Mendes</span>
+                        <span class="date-local">1988,&ensp;&nbsp;Acre</span>
+                    </p>
+                </div>
+                <div class="name-unit"> 
+                    <p>
+                        <span class="date-local">1944,&ensp;&nbsp;Acre </span>
+                        <span class="name">Chico Mendes</span>
+                        <span class="date-local">1988,&ensp;&nbsp;Acre</span>
+                    </p>
+                </div>
+                <div class="name-unit"> 
+                    <p>
+                        <span class="date-local">1944,&ensp;&nbsp;Acre </span>
+                        <span class="name">Chico Mendes</span>
+                        <span class="date-local">1988,&ensp;&nbsp;Acre</span>
+                    </p>
+                </div>
+                <div class="name-unit"> 
+                    <p>
+                        <span class="date-local">1944,&ensp;&nbsp;Acre </span>
+                        <span class="name">Chico Mendes</span>
+                        <span class="date-local">1988,&ensp;&nbsp;Acre</span>
+                    </p>
+                </div>
+                <div class="name-unit"> 
+                    <p>
+                        <span class="date-local">1944,&ensp;&nbsp;Acre </span>
+                        <span class="name">Chico Mendes</span>
+                        <span class="date-local">1988,&ensp;&nbsp;Acre</span>
+                    </p>
+                </div>
+                <div class="name-unit"> 
+                    <p>
+                        <span class="date-local">1944,&ensp;&nbsp;Acre </span>
+                        <span class="name">Chico Mendes</span>
+                        <span class="date-local">1988,&ensp;&nbsp;Acre</span>
+                    </p>
+                </div>
+                <div class="name-unit"> 
+                    <p>
+                        <span class="date-local">1944,&ensp;&nbsp;Acre </span>
+                        <span class="name">Chico Mendes</span>
+                        <span class="date-local">1988,&ensp;&nbsp;Acre</span>
+                    </p>
+                </div>
+                <div class="name-unit"> 
+                    <p>
+                        <span class="date-local">1944,&ensp;&nbsp;Acre </span>
+                        <span class="name">Chico Mendes</span>
+                        <span class="date-local">1988,&ensp;&nbsp;Acre</span>
+                    </p>
+                </div>
+                <div class="name-unit"> 
+                    <p>
+                        <span class="date-local">1944,&ensp;&nbsp;Acre </span>
+                        <span class="name">Chico Mendes</span>
+                        <span class="date-local">1988,&ensp;&nbsp;Acre</span>
+                    </p>
+                </div>
+                <div class="name-unit"> 
+                    <p>
+                        <span class="date-local">1944,&ensp;&nbsp;Acre </span>
+                        <span class="name">Chico Mendes</span>
+                        <span class="date-local">1988,&ensp;&nbsp;Acre</span>
+                    </p>
+                </div>
+                <div class="name-unit"> 
+                    <p>
+                        <span class="date-local">1944,&ensp;&nbsp;Acre </span>
+                        <span class="name">Chico Mendes</span>
+                        <span class="date-local">1988,&ensp;&nbsp;Acre</span>
+                    </p>
+                </div>
+                <div class="name-unit"> 
+                    <p>
+                        <span class="date-local">1944,&ensp;&nbsp;Acre </span>
+                        <span class="name">Chico Mendes</span>
+                        <span class="date-local">1988,&ensp;&nbsp;Acre</span>
+                    </p>
+                </div>
+                <div class="name-unit"> 
+                    <p>
+                        <span class="date-local">1944,&ensp;&nbsp;Acre </span>
+                        <span class="name">Chico Mendes</span>
+                        <span class="date-local">1988,&ensp;&nbsp;Acre</span>
+                    </p>
+                </div>
+                <div class="name-unit"> 
+                    <p>
+                        <span class="date-local">1944,&ensp;&nbsp;Acre </span>
+                        <span class="name">Chico Mendes</span>
+                        <span class="date-local">1988,&ensp;&nbsp;Acre</span>
+                    </p>
+                </div>
+                <div class="name-unit"> 
+                    <p>
+                        <span class="date-local">1944,&ensp;&nbsp;Acre </span>
+                        <span class="name">Chico Mendes</span>
+                        <span class="date-local">1988,&ensp;&nbsp;Acre</span>
+                    </p>
+                </div>
+                <div class="name-unit"> 
+                    <p>
+                        <span class="date-local">1944,&ensp;&nbsp;Acre </span>
+                        <span class="name">Chico Mendes</span>
+                        <span class="date-local">1988,&ensp;&nbsp;Acre</span>
+                    </p>
+                </div>
+                <div class="name-unit"> 
+                    <p>
+                        <span class="date-local">1944,&ensp;&nbsp;Acre </span>
+                        <span class="name">Chico Mendes</span>
+                        <span class="date-local">1988,&ensp;&nbsp;Acre</span>
+                    </p>
+                </div>
+                <div class="name-unit"> 
+                    <p>
+                        <span class="date-local">1944,&ensp;&nbsp;Acre </span>
+                        <span class="name">Chico Mendes</span>
+                        <span class="date-local">1988,&ensp;&nbsp;Acre</span>
+                    </p> -->
+                </div>
+            </section>
+        </main>
+{% endblock %}

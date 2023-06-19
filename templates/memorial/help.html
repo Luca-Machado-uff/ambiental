@@ -1,0 +1,35 @@
+{% extends 'memorial/base.html' %}
+{% load static %}
+{% block content %}
+    <header class="main-header">
+        <div>
+            <ul class="header-menu">
+                <li> 
+                    <a href="{% url 'index' %}">Home</a>
+                </li>
+                <li> 
+                    <a href="{% url 'sobre' %}">Sobre o site</a>
+                </li>
+                <li> 
+                    <a href="{% url 'ajuda' %}">Ajude o projeto</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <div class="help-body">
+        <main class="help-main">
+                <h2>Ajude nosso banco de dados a crescer</h2>
+                <p>Nossa base de dados ainda é muito limitada, estamos sempre entrando em contato com estudiosos 
+                    das áreas ambientais, sociais e antropológicas para nos auxiliar a preencher nosso banco de 
+                    dados e dar visibilidade a todos que deram sua vida. Então caso tenha qualquer informação 
+                    sobre ambientalistas, liderança indigenas, ou qualquer pessoa que perdeu sua vida por conta 
+                    da luta ambiental entre em contato conosco clicando no botão abaixo</p>
+                    
+                    <a href=""><button class="help-button">Ajude o Projeto</button></a>
+
+                    <p>Outra forma de ajudar o projeto é dar um retorno e avalia-lo e dar sugestões respondendo um breve formulário de duração que não passa de 5 minutos</p>
+                        
+                        <a href=""><button class="help-button">Avalie o Projeto</button></a>
+        </main>
+    </div>
+{% endblock %}
