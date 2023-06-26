@@ -33,14 +33,14 @@ body {
 .main-body {
     background-color: black;
     opacity: 1.0;
-    min-height: calc(100vh - 60px);
+    min-height: calc(100vh - 80px);
     display: flex;
     flex-direction: column;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    padding-bottom: 60px;
+    padding-bottom: 80px;
 
 
 }
@@ -118,7 +118,7 @@ a{
 
 .home-main{
     color: antiquewhite;
-    min-height: calc(800% - 60px);
+    min-height: calc(800% - 80px);
 }
 
 .names-section{
