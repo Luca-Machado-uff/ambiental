@@ -188,7 +188,7 @@ a{
     opacity: 0.9;
     background-color: #FAFAFA;
     color: black;
-    max-width: 55vw;
+    max-width: 65vw;
     padding: 2rem 3rem ;
     justify-self: center;
     display: flex;
@@ -215,4 +215,34 @@ a{
     width: 176px;
     border-radius: 5px;
     border: none;
+}
+
+
+@media (max-width: 575px) {
+    .main-header{
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        margin-left: 0;
+        
+    }
+}
+
+@media (max-width: 750px) {
+    .header-menu {
+        font-size: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content:center;
+    }
+    .help-main{
+        max-width: 85vw;
+    }
+    .name{
+        font-size: 2rem;
+        margin: 0 0.75rem;
+    }
+    .date-local{
+        font-size: 0.75rem;
+    }
 }
