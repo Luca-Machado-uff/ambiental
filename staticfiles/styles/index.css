@@ -225,12 +225,13 @@ a{
     border: none;
 }
 
-@media only screen and (max-width: 750px) {
+@media (max-width: 750px) {
     .date-local{
         font-size: 0.75rem;
     }
     .name-unit{
         flex-direction: column;
+        align-content: center;
         margin-top: 20rem;
     }
     .name{
