@@ -231,6 +231,7 @@ a{
     }
     .name-unit{
         flex-direction: column;
+        align-content: center;
         margin-top: 20rem;
     }
     .name{
