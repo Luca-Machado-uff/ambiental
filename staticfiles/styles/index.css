@@ -232,7 +232,7 @@ a{
     .name-unit{
         flex-direction: column;
         align-content: center;
-        margin-top: 20rem;
+        margin-top: 2rem;
     }
     .name{
         font-size: 2rem;
