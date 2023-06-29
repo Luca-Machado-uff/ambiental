@@ -233,6 +233,7 @@ a{
         flex-direction: column;
         align-content: center;
         margin-top: 2rem;
+        align-items: center;
     }
     .name{
         font-size: 2rem;
