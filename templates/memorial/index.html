@@ -34,11 +34,9 @@
                 {% if nomes %}
                 {% for memorias in nomes %}
                 <div class="name-unit"> 
-                    <p>
-                        <span class="date-local">{{memorias.ano_de_nascimento}},&ensp;&nbsp;{{memorias.local_de_nascimento}}</span>
-                        <span class="name">{{memorias.nome}}</span>
-                        <span class="date-local">{{memorias.ano_de_falecimento}},&ensp;&nbsp;{{memorias.local_de_falecimento}}</span>
-                    </p>
+                        <div class="date-local">{{memorias.ano_de_nascimento|default:"???"}},&ensp;&nbsp;{{memorias.local_de_nascimento|default:"???"}}</div>
+                        <div class="name">{{memorias.nome}}</div>
+                        <div class="date-local">{{memorias.ano_de_falecimento|default:"???"}},&ensp;&nbsp;{{memorias.local_de_falecimento|default:"???"}}</div>
                 </div>
                 {% endfor %}
                 {% else %}
