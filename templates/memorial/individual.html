@@ -1,0 +1,26 @@
+{% extends 'memorial/base.html' %}
+{% load static %}
+{% block content %}
+    <header class="main-header">
+        <div>
+            <ul class="header-menu">
+                <li> 
+                    <a href="{% url 'index' %}">Home</a>
+                </li>
+                <li> 
+                    <a href="{% url 'sobre' %}">Sobre o site</a>
+                </li>
+                <li> 
+                    <a href="{% url 'ajuda' %}">Ajude o projeto</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <div class="help-body">
+        <main class=" individual-main help-main">
+                <h2>{{memoria.nome}}</h2>
+                <p>{{memoria.descricao}}</p>
+
+        </main>
+    </div>
+{% endblock %}

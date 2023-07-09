@@ -224,7 +224,16 @@ a{
     border-radius: 5px;
     border: none;
 }
-
+individual-main{
+    min-width: 500px;
+}
+@media (max-width: 700px) {
+    individual-main {
+    max-width:90%;
+    min-width: none;
+    display:block;
+  }
+}
 @media (max-width: 750px) {
     .date-local{
         font-size: 0.75rem;

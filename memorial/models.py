@@ -10,7 +10,7 @@ class Memorias(models.Model):
     ano_de_falecimento = models.IntegerField(null=True, blank=True, help_text = "Preencher caso o dia exato de falecimento seja desconhecido")
     local_de_nascimento = models.CharField(max_length=100, null=True, blank=True)
     local_de_falecimento = models.CharField(max_length=100, null=True, blank=True)
-    descrição = models.TextField(null=True, blank=True)
+    descricao = models.TextField(null=True, blank=True)
 
 
     #tolook Facilita a visualização ao ser printado na parte do admin

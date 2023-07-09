@@ -35,7 +35,7 @@
                 {% for memorias in nomes %}
                 <div class="name-unit"> 
                         <div class="date-local">{{memorias.ano_de_nascimento|default:"???"}},&ensp;&nbsp;{{memorias.local_de_nascimento|default:"???"}}</div>
-                        <div class="name">{{memorias.nome}}</div>
+                        <a href="{% url 'individual' memorias.id %}"><div class="name">{{memorias.nome}}</div></a>
                         <div class="date-local">{{memorias.ano_de_falecimento|default:"???"}},&ensp;&nbsp;{{memorias.local_de_falecimento|default:"???"}}</div>
                 </div>
                 {% endfor %}

@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from memorial.models import Memorias
 
 def index(request):
@@ -18,3 +18,6 @@ def help(request):
     return render(request, 'memorial/help.html')
 
 
+def individual(request, _id):
+    memoria = get_object_or_404(Memorias, pk=_id)
+    return render(request, 'memorial/individual.html', {"memoria": memoria})
